@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>pay/less</title>
+    <meta name="description" content>
+    <meta name="author" content>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,400,600&display=swap" rel="stylesheet">
+
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/normalize.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/skeleton.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/custom.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style_workflow.css')}}">
+    <!-- <link rel="stylesheet" href="css/style_research.css"> -->
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="{{url_for('static', filename='js/site.js')}}"></script>
+    <script src="{{url_for('static', filename='js/typewriter.js')}}"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav-spacer"></div>
+        <nav class="navbar">
+            <div class="container">
+                <ul class="navbar-list">
+                    <a href="#about"><li class="navbar-item">ABOUT</li></a>
+                    <a href="{{url_for('workflow')}}"><li class="navbar-item">WORKFLOW</li></a>
+                    <a href="team.html"><li class="navbar-item">SIGNIT</li></a>
+                    <a href="{{url_for('filestack')}}"><li class="navbar-item">FILESTACK</li></a>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="row">
+            <div class="spacer"></div>
+        </div>
+
+        <h3 class="heading no-border">{{cur_name}}</h3>
+        <a href="{{url_for('logout')}}"><h4 class="small">LOGOUT</h4></a>
+        
+        <div class="row">
+            <div class="spacer"></div>
+        </div>
+    
+        <div class="row">
+            <div class="twelve columns">
+                <div class="heading">Define Workflow</div>
+                
+                <div class="row">
+                    <div class="spacer-small"></div>
+                </div>
+
+                <div class="row">
+                    <form action="{{url_for('workflow_create')}}" method="post" enctype="multipart/form-data">
+
+                        <input name="pipeline" placeholder="Define Pipeline" class="workflow u-full-width">
+                        <div class="spacer-small"></div>
+                        <input name="pdf" type="file" value="Upload">
+                        <input class="button-primary" type="submit" value="CREATE">
+
+                    </form>
+                </div>
+
+                
+            </div>
+    
+        </div>
+
+    </div>
+
+    
+</body>
+</html>

@@ -1,5 +1,5 @@
 from flask_login import UserMixin
-from auth import auth_status, get_user
+from auth import get_user
 
 class User(UserMixin):
     def __init__(self, identifier):

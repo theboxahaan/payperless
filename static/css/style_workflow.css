@@ -1,0 +1,14 @@
+
+.workflow{
+    background: rgb(247, 245, 245);
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid grey;
+    padding: 1.15em;
+    
+}
+
+.workflow:focus{
+    text-decoration: none;
+    outline-color: white;
+}

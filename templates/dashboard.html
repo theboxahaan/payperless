@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:200,400,600&display=swap" rel="stylesheet">
 
     <!-- <link rel="stylesheet" href="css/normalize.css"> -->
-    <link rel="stylesheey" href="{{url_for('static', filename='css/normalize.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/normalize.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/skeleton.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/custom.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/style_stackfiles.css')}}">
@@ -30,9 +30,9 @@
             <div class="container">
                 <ul class="navbar-list">
                     <a href="#about"><li class="navbar-item">ABOUT</li></a>
-                    <a href="research.html"><li class="navbar-item">WORKFLOW</li></a>
+                    <a href="{{url_for('workflow')}}"><li class="navbar-item">WORKFLOW</li></a>
                     <a href="team.html"><li class="navbar-item">SIGNIT</li></a>
-                    <a href="pubs.html"><li class="navbar-item">FILESTACK</li></a>
+                    <a href="{{url_for('filestack')}}"><li class="navbar-item">FILESTACK</li></a>
                 </ul>
             </div>
         </nav>
@@ -42,6 +42,7 @@
         </div>
 
         <h3 class="heading no-border">{{cur_name}}</h3>
+        <a href="{{url_for('logout')}}"><h4 class="small">LOGOUT</h4></a>
         
         <div class="row">
             <div class="spacer"></div>
@@ -59,7 +60,7 @@
                             <img style="float:right;max-width: 100%;" src="https://imgs.xkcd.com/comics/security.png">
                         </div>
                         <div class="eight columns">
-                            <h3 class="small heading no-border">Document - Moona Madarchod-DUE - 24.9.91</h3>
+                            <h3 class="small heading no-border">Document - Leave - 24.9.91</h3>
                             <h3 class="small heading">CREATOR - IIT BHILAI</h3>
                             
                             <div class="spacer-small"></div>
@@ -73,7 +74,7 @@
                             <img style="float:right;max-width: 100%;" src="https://imgs.xkcd.com/comics/security.png">
                         </div>
                         <div class="eight columns">
-                            <h3 class="small heading no-border">Document - Moona Madarchod-DUE - 24.9.91</h3>
+                            <h3 class="small heading no-border">Document - Leave - DUE - 24.9.91</h3>
                             <h3 class="small heading">CREATOR - IIT BHILAI</h3>
                             
                             <div class="spacer-small"></div>
@@ -87,7 +88,7 @@
                             <img style="float:right;max-width: 100%;" src="https://imgs.xkcd.com/comics/security.png">
                         </div>
                         <div class="eight columns">
-                            <h3 class="small heading no-border">Document - Moona Madarchod-DUE - 24.9.91</h3>
+                            <h3 class="small heading no-border">Document - Leave - DUE - 24.9.91</h3>
                             <h3 class="small heading">CREATOR - IIT BHILAI</h3>
                             
                             <div class="spacer-small"></div>
